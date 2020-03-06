@@ -20,8 +20,8 @@ phases:
       - cd static-website
       - echo "Running tests in Chrome"
       - npm run test:e2e -- -e chrome
-      - echo "Running tests in Firefox"
-      - npm run test:e2e -- -e firefox
+      # - echo "Running tests in Firefox"
+      # - npm run test:e2e -- -e firefox
     finally:
       - cd $CODEBUILD_SRC_DIR
 #     Cleanup commands end with "|| true" to ensure that all of them are executed. It's ok if they fail trying to delete a resource that was never created due to a build phase error.
